@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['AMADEUS_DATABASE_USER'] %>
+  password: <%= ENV['AMADEUS_DATABASE_PASSWORD'] %>
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: amadeus_development
+
+test:
+  <<: *default
+  database: amadeus_test
+
+production:
+  <<: *default
+  database: amadeus_production
