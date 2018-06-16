@@ -1,3 +1,7 @@
+# What's this?
+
+* For learning what Solidus is, this is sample application of EC which sells skateboard stuff or something but I don't know yet.
+
 # Setup
 
 ## dotenv
